@@ -2,17 +2,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
-@import "animatewithsass/animate.scss";
-.lightSpeedIn {
-  @include lightSpeedIn(
-    $count: $countDefault,
-    $duration: $durationDefault,
-    $delay: $delayDefault,
-    $function: $functionDefault,
-    $fill: $fillDefault,
-    $visibility: $visibilityDefault
-  );
-}
 
 h2 {
   color: #792396;
