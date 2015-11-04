@@ -8,10 +8,13 @@
  * Controller of the angularJsApp
  */
 angular.module('angularJsApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, place) {
+    $scope.place = place.query();
+
+    $scope.refreshCurrent = function(){
+        $scope.place = place.query({
+            city_eq: $scope.place
+        });
+        console.log ($scope.place);
+    };
   });

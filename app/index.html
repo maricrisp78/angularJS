@@ -19,26 +19,52 @@
               </script>
 
     <!-- endbuild -->
+
+<header>
+
+<div>
+
+<div> <img class="logo" src="images/logotransparent.png" style="heigth: 300px;width: auto;"> 
+</div>
+
+<aside id="social">
+  <p class="follow">Follow Us</p>
+    
+  <a href="https://twitter.com">
+    <img src='images/social/twittericon.png' style="width: 45px;height: auto;"></a>  
+  <a href="http://facebook.com">
+    <img src='images/social/facebookicon.png' style="width: 45px;height: auto;"></a> 
+  <a href="https://instagram.com">
+    <img src='images/social/instagramicon.png' style="width: 45px;height: auto;"></a> 
+  <a href="mailto:marieashley_78@hotmail.com">
+    <img src='images/social/emailicon.png' style="width: 45px;height: auto;"></a> 
+    
+    
+
+
+</header>
+
+
+
+
+
   </head>
   <body ng-app="angularJsApp">
+
+
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-
-
-
-    <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
+     <div class="header">
+  
           <div class="navbar-header">
 
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+        
             </button>
 
             <a class="navbar-brand lightSpeedIn animated" href="#/">angularJs</a>
@@ -60,11 +86,49 @@
     <div ng-view=""></div>
     </div>
 
-    <div class="footer">
+    <!-- Add your site or application content here -->
+
+
+<div class="maintrails">
+<ul class="maintrails">
+
+
+<li>
+<a href="images/Lake Serene/Screen Shot Lake Serene.png" class="maintrail1"> <img src="images/Lake Serene/Screen Shot Lake Serene LARGE.png" style="heigth: auto;width: 500px;" > 
+</li>
+
+<li>
+<a href="images/Wallace Falls/Screen Shot Wallace Falls.png" class="maintrail2"> <img src="images/Wallace Falls/Screen Shot Wallace Falls LARGE.png" style="heigth: auto;width: 500px;" > 
+</li>
+ 
+<li>
+<a href="images/Mt. Si/Screen Shot Mt. Si.png" class="maintrail3"> <img src="images/Mt. Si/Screen Shot Mt. Si LARGE.png " style="heigth: auto;width: 500px;" > 
+</li>
+ 
+<li> 
+<a href="images/Lake Serene/Screen Shot Lake Serene.png" class="maintrail1"> <img src="images/Lake Serene/Screen Shot Lake Serene LARGE.png" style="heigth: auto;width: 500px;" > 
+</li> 
+
+
+  </ul>
+
+ </div>
+
+
+<br>
+
+
+<br>
+
+
+<div class="footer">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p><span class="apiterms"></span> Copyright 2012 TrailAPI.</p>
       </div>
     </div>
+
+
+
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -98,6 +162,13 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/services/current.js"></script>
         <!-- endbuild -->
+
+
+
+
+
+
 </body>
 </html>
