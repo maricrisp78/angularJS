@@ -7,14 +7,16 @@
  * # MainCtrl
  * Controller of the angularJsApp
  */
-angular.module('angularJsApp')
-  .controller('MainCtrl', function ($scope, place) {
-    $scope.place = place.query();
 
-    $scope.refreshCurrent = function(){
-        $scope.place = place.query({
-            city_eq: $scope.place
+angular.module('angularJsApp')
+  .controller('MainCtrl', function ($scope, hikeSearch) {
+
+    $scope.findHikes = function(){
+    	$scope.hikesFound = hikeSearch.find({
+    		city_eq: $scope.location
         });
-        console.log ($scope.place);
     };
+    
   });
+
+

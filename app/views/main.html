@@ -1,26 +1,59 @@
 <div ng-app class="jumbotron" ng-controller="MainCtrl">
-  <h2>Trails in {{place.name}}</h2>
+  <h2>Trails in</h2>
   <p class="lead">
-    <div ng-init="place=''">
+    <div ng-init="location=' '">
         <p>
-          <label class="city">City:
-            <input type="text" name="City" placeholder=" Enter City here" minlength="2" ng-model="place">
+          <label class="Location">Location:
+            <input type="text" name="Location" placeholder=" Enter City here" minlength="2" ng-model=" location">
           </label>
-
-          <label class="state">State:
-            <input type="text" name="State" placeholder=" Enter State here" maxlength="2" ng-model="place">
-          </label>
-
-
-
         </p>
+   
+      
         <p>
-          <button class="btn btn-lg btn-primary" ng-click="refreshCurrent()">Find me some trails to hike!</button>
+          <button class="btn btn-lg btn-primary" ng-click="findHikes()">Find me some trails to hike!</button>
         </p>
+
+        <br>
+
+        <!-- {{hikesFound.places[0].city}} -->
+        <ul class="hikeresults">
+          <li ng-repeat="hike in hikesFound.places | limitTo: 5">
+             <strong>{{hike.name}}</strong> | 
+
+             {{hike.city}},
+             {{hike.state}} <br>
+            {{hike.activities[0].description}} 
+            {{hike.activities[0].thumbnail}}  
+            <br>
+             <br>
+
+             
+
+
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div ng-if="searchQuery">
+        <p class="lead">{{citiesFound.count}} cities found matching the query: {{searchQuery}}. </p>
+
+
+
+
         <dl ng-repeat="place in places">
-          {{place.name}}
-  
+          <dt>{{city.name}}, {{city.sys.country}}</dt>
+        <dd>{{city.place[0].main}} - {{city.place[0].description}}</dd>
+        <dt>Name</dt>
+        <dd>{{city.name.description}} &deg;F</dd>
+        <dd><a ng-href="/#/place/{{place.id}}" class="btn btn-lg btn-primary">View Trails</a></dd>
       </dl>
     </div>
+  </p>
+</div> {{place.name}}
+  
+      </dl>
+   
   </p>
 </div>

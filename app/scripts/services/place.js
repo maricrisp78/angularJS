@@ -14,20 +14,16 @@ angular.module('angularJsApp')
 
     // Public API here
     return $resource(
-      'https://outdoor-data-api.herokuapp.com/api.json?api_key=3d915e7fea908a3df09ece5462427d44&city_eq=:city_eq?callback=JSON_CALLBACK', {},
+       'https://outdoor-data-api.herokuapp.com/api.json?api_key=3d915e7fea908a3df09ece5462427d44&city_eq=:city_eq?', {},
       {
-        callback: "JSON_CALLBACK" 
-      },
-      {  
         query: {
-          method:'JSONP',
-          params:{
-            city_eq: 'Seattle'
-          },
-          isArray:false
-        }
+        method:'GET',
+        params:{
+          place_id: '27369' //Steliko Ridge Trail
+        },
+        isArray:false
       }
-    );
+    });
   });
 
 
