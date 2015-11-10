@@ -17,7 +17,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngStorage'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -35,6 +36,11 @@ angular
         templateUrl: 'views/current.html',
         controller: 'CurrentCtrl',
         controllerAs: 'current'
+      })
+      .when('/directions/:directions', {
+        templateUrl: 'views/directions.html',
+        controller: 'DirectionsCtrl',
+        controllerAs: 'directions'
       })
       .otherwise({
         redirectTo: '/'

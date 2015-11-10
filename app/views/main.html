@@ -4,7 +4,7 @@
     <div ng-init="location=' '">
         <p>
           <label class="Location">Location:
-            <input type="text" name="Location" placeholder=" Enter City here" minlength="2" ng-model=" location">
+            <input type="text" name="Location" placeholder="Enter City here" minlength="2" ng-model=" location">
           </label>
         </p>
    
@@ -23,13 +23,17 @@
              {{hike.city}},
              {{hike.state}} <br>
             {{hike.activities[0].description}} 
-            {{hike.activities[0].thumbnail}}  
-            <br>
-             <br>
+            {{hike.activities[0].thumbnail}}  <br>
+            {{hike.thumbnail}}
+            <img src="images/Mt. Si/Mt. Si5.jpeg" style="width:200px;height:auto">
 
-             
+<br>
+<br>
+           <button class="directions" id="btn btn-lg btn-primary" ng-click="directions()">Click here for directions</button>
+           
 
-
+<br>
+             <br> <hr>
           </li>
 
         </ul>
@@ -41,13 +45,12 @@
 
 
 
-
         <dl ng-repeat="place in places">
-          <dt>{{city.name}}, {{city.sys.country}}</dt>
+          <dt>{{city.name}}</dt>
         <dd>{{city.place[0].main}} - {{city.place[0].description}}</dd>
         <dt>Name</dt>
         <dd>{{city.name.description}} &deg;F</dd>
-        <dd><a ng-href="/#/place/{{place.id}}" class="btn btn-lg btn-primary">View Trails</a></dd>
+        <dd><a ng-href="/#/hikeSearch/{{place.id}}" class="btn btn-lg btn-primary">View Trails</a></dd>
       </dl>
     </div>
   </p>
@@ -56,4 +59,14 @@
       </dl>
    
   </p>
+</div>
+
+
+<div ng-if="storage.savedCities">
+  <h2>Saved Cities</h2>
+  <ul class="saved-cities-list">
+    <li ng-repeat="city in storage.savedCities">
+      <a ng-href="/#/hikeSearch/{{city.id}}" class="btn btn-lg btn-primary">{{city.name}}</a>
+    </li>
+  </ul>
 </div>
