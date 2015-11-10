@@ -12,7 +12,7 @@
         <p>
           <button class="btn btn-lg btn-primary" ng-click="findHikes()">Find me some trails to hike!</button>
         </p>
-
+<hr>
         <br>
 
         <!-- {{hikesFound.places[0].city}} -->
@@ -41,11 +41,11 @@
       </div>
 
       <div ng-if="searchQuery">
-        <p class="lead">{{citiesFound.count}} cities found matching the query: {{searchQuery}}. </p>
+        <p class="lead">{{hikesFound.count}} hikes found matching the query: {{searchQuery}}. </p>
 
 
 
-        <dl ng-repeat="place in places">
+        <dl ng-repeat="hike in places">
           <dt>{{city.name}}</dt>
         <dd>{{city.place[0].main}} - {{city.place[0].description}}</dd>
         <dt>Name</dt>
