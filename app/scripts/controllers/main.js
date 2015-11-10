@@ -12,8 +12,8 @@ angular.module('angularJsApp')
   .controller('MainCtrl', function ($scope, hikeSearch, $localStorage) {
 
     $scope.findHikes = function(){
-    	$scope.hikesFound = hikeSearch.find({
-    		city_eq: $scope.location
+        $scope.hikesFound = hikeSearch.find({
+            city_eq: $scope.location
         });
     };
 

@@ -17,10 +17,10 @@ angular.module('angularJsApp')
   });
 
 
-    // Service logic --
+    // Service logic
     // ...
 
-// IS THIS SUPPOSED TO GO HERE? 
+
 
     // Public API here
 
