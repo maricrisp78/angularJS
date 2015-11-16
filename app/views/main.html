@@ -1,5 +1,5 @@
 <div class="jumbotron" ng-controller="MainCtrl">
-  <h2>Trails in</h2>
+  <h2>Trails in:</h2>
   <p class="lead">
     <div>
         <p>
@@ -12,12 +12,18 @@
         <p>
           <button class="btn btn-lg btn-primary" ng-click="findHikes()">Find me some trails to hike!</button>
         </p>
-<hr>
+
+        <p>
+ <button class="directions" id="btn btn-lg btn-primary" ng-click="directions()">Saved Hikes</button>
+        </p>
+
+
+
         <br>
 
         <!-- {{hikesFound.places[0].city}} -->
         <ul class="hikeresults">
-          <li ng-repeat="hike in hikesFound.places | limitTo: 5">
+          <li ng-animate="'animate'" ng-repeat="hike in hikesFound.places | limitTo: 5">
              <strong>{{hike.name}}</strong> | 
 
              {{hike.city}},
@@ -25,15 +31,15 @@
             {{hike.activities[0].description}} 
             {{hike.activities[0].thumbnail}}  <br>
             {{hike.thumbnail}}
-            <img src="images/Mt. Si/Mt. Si5.jpeg" style="width:200px;height:auto">
+            <img class="thumbnail" src="images/Mt. Si/Mt. Si5.jpeg" style="width:200px;height:auto">
 
-<br>
 <br>
            <button class="directions" id="btn btn-lg btn-primary" ng-click="directions()">Click here for directions</button>
 
-           <button class="directions" id="btn btn-lg btn-primary" ng-click="saveCity(hike)">Saved Cities</button>
+
+           <button class="savecity" id="btn btn-lg btn-primary" ng-click="saveCity(hike)">Save hike</button>
 <br>
-             <br> <hr>
+             <br>
           </li>
 
         </ul>
@@ -45,7 +51,7 @@
 
 
 
-        <dl ng-repeat="hike in places">
+        <dl ng-animate="'animate'" ng-repeat="hike in places" >
           <dt>{{city.name}}</dt>
         <dd>{{city.place[0].main}} - {{city.place[0].description}}</dd>
         <dt>Name</dt>
@@ -54,7 +60,7 @@
       </dl>
     </div>
   </p>
-</div> {{place.name}}
+</div> 
   
       </dl>
    

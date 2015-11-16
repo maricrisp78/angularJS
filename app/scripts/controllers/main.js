@@ -8,6 +8,8 @@
  * Controller of the angularJsApp
  */
 
+
+
 angular.module('angularJsApp')
   .controller('MainCtrl', function ($scope, hikeSearch, $localStorage) {
 
@@ -16,6 +18,7 @@ angular.module('angularJsApp')
             city_eq: $scope.location
         });
     };
+
 
     $scope.saveCity = function(city){
         if (!$localStorage.savedCities){
@@ -46,4 +49,24 @@ angular.module('angularJsApp')
 
   });
 
+$( document ).ready(function() {
 
+var userInfo = {
+    username: ' guest'
+
+};
+
+
+    $('#login-form').on('click', function() {
+        $('#login-form').hide();
+        $('.user-info').show();
+        $('.username').text(userInfo.username);
+
+    $('.submit').on('click', function() {
+        $('.submit').show();
+        $('#login-form').hide();
+        $('.user-info').hide() ++;
+        
+    });
+});
+});

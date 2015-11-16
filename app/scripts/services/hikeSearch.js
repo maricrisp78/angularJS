@@ -9,6 +9,7 @@
  */
 angular.module('angularJsApp')
   .factory('hikeSearch', function ($resource) {
+  
     // Service logic
     // ...
 

@@ -14,6 +14,8 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <script src="wow.min.js"></script>
+
+
     <script>
               // new WOW().init();
               </script>
@@ -24,32 +26,57 @@
 
 <div>
 
-<div> <img class="logo" src="images/logotransparent.png" style="heigth: 300px;width: auto;"> 
+<div> <img class="logo hinge zoomIn animated" src="images/logo_whiteupdated.png" style="heigth: 300px;width: auto;"> 
+</div>
+
+<div> <img class="shoe hinge animated" src="images/hikingshoe.png" style="heigth: 70px;width: auto;"> 
 </div>
 
 <aside id="social">
   <p class="follow">Follow Us</p>
     
   <a href="https://twitter.com">
-    <img src='images/social/twittericon.png' style="width: 45px;height: auto;"></a>  
+    <img src='images/social/twittericon.png' style="width: 55px;height: auto;"></a>  
   <a href="http://facebook.com">
-    <img src='images/social/facebookicon.png' style="width: 45px;height: auto;"></a> 
+    <img src='images/social/facebookicon.png' style="width: 55px;height: auto;"></a> 
   <a href="https://instagram.com">
-    <img src='images/social/instagramicon.png' style="width: 45px;height: auto;"></a> 
+    <img src='images/social/instagramicon.png' style="width: 55px;height: auto;"></a> 
   <a href="mailto:marieashley_78@hotmail.com">
-    <img src='images/social/emailicon.png' style="width: 45px;height: auto;"></a> 
+    <img src='images/social/emailicon.png' style="width: 55px;height: auto;"></a> 
     
-    
+ </aside>   
+
+ <div class="form-group">
+ <div class="navbar-right user-info">Welcome, <span class="username">Name</span> 
+</div>
+
+    <form id="login-form" class="entername" method="get" action="thankyou.html" onsubmit="javascript:return validate ('entername');" >
+      
+      <p>
+      <label class="entername"> Your Name </label>
+        <br>
+      <input id="name" name="name" minlength="2" maxlength="128" type="text" placeholder=" Your Name" required>
+    </p>
+
+<button class="submit"> Submit </button>
+
+  </form>
+</div>
+
+
 
 
 </header>
 
 
 
-
-
   </head>
   <body ng-app="angularJsApp">
+
+
+<div ng-repeat="item in itens" ng-animate=" 'animate' ">
+    ...
+</div>
 
 
     <!--[if lte IE 8]>
@@ -67,7 +94,6 @@
         
             </button>
 
-            <a class="navbar-brand lightSpeedIn animated" href="#/">angularJs</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -75,7 +101,7 @@
             <ul class="nav navbar-nav">
               <li class="active"><a href="#/">Home</a></li>
               <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
+              <li><a ng-href="#/contact">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -90,23 +116,27 @@
 
 
 <div class="maintrails">
+
+
+<p class="featured">Featured Trails</p>
+
+
 <ul class="maintrails">
 
-
 <li>
-<a href="images/Lake Serene/Screen Shot Lake Serene.png" class="maintrail1"> <img src="images/Lake Serene/Screen Shot Lake Serene LARGE.png" style="heigth: auto;width: 500px;" > 
+<a href="images/Lake Serene/Screen Shot Lake Serene.png" class="maintrail1"> <img src="images/Lake Serene/Screen Shot Lake Serene LARGE.png" style="heigth: auto;width:200px;" > 
 </li>
 
 <li>
-<a href="images/Wallace Falls/Screen Shot Wallace Falls.png" class="maintrail2"> <img src="images/Wallace Falls/Screen Shot Wallace Falls LARGE.png" style="heigth: auto;width: 500px;" > 
+<a href="images/Wallace Falls/Screen Shot Wallace Falls.png" class="maintrail2"> <img src="images/Wallace Falls/Screen Shot Wallace Falls LARGE.png" style="heigth: auto;width: 200px;" > 
 </li>
  
 <li>
-<a href="images/Mt. Si/Screen Shot Mt. Si.png" class="maintrail3"> <img src="images/Mt. Si/Screen Shot Mt. Si LARGE.png " style="heigth: auto;width: 500px;" > 
+<a href="images/Mt. Si/Screen Shot Mt. Si.png" class="maintrail3"> <img src="images/Mt. Si/Screen Shot Mt. Si LARGE.png " style="heigth: auto;width: 200px;" > 
 </li>
  
 <li> 
-<a href="images/Lake Serene/Screen Shot Lake Serene.png" class="maintrail1"> <img src="images/Lake Serene/Screen Shot Lake Serene LARGE.png" style="heigth: auto;width: 500px;" > 
+<a href="images/Lake Serene/Screen Shot Lake Serene.png" class="maintrail1"> <img src="images/Lake Serene/Screen Shot Lake Serene LARGE.png" style="heigth: auto;width: 200px;" > 
 </li> 
 
 
@@ -120,12 +150,6 @@
 
 <br>
 
-
-<div class="footer">
-      <div class="container">
-        <p><span class="apiterms"></span> Copyright 2012 TrailAPI.</p>
-      </div>
-    </div>
 
 
 
@@ -170,7 +194,64 @@
         <!-- endbuild -->
 
 
+<div class="credits">
 
+<ul class="aboutus">
+<li><strong>ABOUT US</strong></li>
+<li> Staff </li>
+<li> Board of Directors </li>
+<li> Corporate Partners </li>
+<li> Job Opportunities </li>
+<li> Financial Information </li>
+<li> Programs </li>
+<li> History </li>
+<li> Contact Us </li>
+<li> Privacy Policy </li>
+<li> 2014 Accomplishments </li>
+</ul>
+
+<ul class="connect">
+<li><strong>CONNECT</strong></li>
+<li> Press Room </li>
+<li> E-Newsletters </li>
+<li> RSS Feeds </li>
+<li> Terms of Service </li>
+<li> Privacy Policy </li>
+<li> Help </li>
+</ul>
+
+<ul class="support">
+<li><strong>SUPPORT</strong></li>
+<li> Join WTA </li>
+<li> Renew </li>
+<li> Donate </li>
+<li> Give Monthly </li>
+<li> Gift Memberships </li>
+<li> Other Ways to Give </li>
+<li> Online Store </li>
+<li> Update Personal Info </li>
+</ul>
+
+<ul class="contact">
+<li><strong>CONTACT US</strong></li>
+<li> Hiking Bliss, Inc. </li>
+<li> 13426 Greenwood Ave. N S eattle, WA 98133 </li>
+<li> (206) 555-1212 </li>
+<li> Facebook.com/Hiking Bliss </li>
+<li> Twitter.com/Hiking_Bliss </li>
+<li> Hiking Bliss, Inc. </li>
+
+</div>
+
+
+<footer>
+
+
+
+<div>
+<p class="copyright">Copyright 2012 TrailAPI.</p>
+</div>
+</footer>
 
 
 

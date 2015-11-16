@@ -4,18 +4,55 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // endbower
 
 h2 {
-  color: #792396;
+  color: #1E7319;
   padding: 5px;
 }
 
+
+#login-form {
+  margin-left: 700px;
+  margin-top: -115px;
+  margin-bottom: 75px;
+}
+
+.user-info {
+  color: orange;
+  font-size: 22px;
+  margin-right: 600px;
+  margin-top: -200px;
+}
+
+.entername {
+  color: #1E7319;
+}
+
+.animate-enter.animate-enter-active, 
+.animate-leave {
+  opacity: 1;
+  top: 0;
+  height: 30px;
+}
+
+.animate-leave.animate-leave-active,
+.animate-enter {
+  opacity: 0;
+  top: -50px;
+  height: 0px;
+}
+
+.username, 
 .about {
   color: white;
 }
 
-.navbar-brand {
+.collapse {
   margin-left: 570px;
   color: white;
   font-size: 18px;
+}
+
+.nav navbar-nav {
+  color: #1E7319;
 }
 
 .browsehappy {
@@ -25,10 +62,34 @@ h2 {
   padding: 0.2em 0;
 }
 
+.thumbnail:hover {
+  opacity: .5;
+  width: 400px;
+  height: autopx;
+}
+
+.shoe {
+  margin-top: -250px;
+  margin-left: 300px;
+}
+
+
+.thumbnail {
+  margin-left: 170px;
+  margin-top: 15px;
+  margin-bottom: -20px;
+}
+
 .hikeresults {
   text-decoration: none;
   color: #AD742A;
   list-style-type: none;
+
+}
+
+.savecity {
+  background-color: #89C284;
+  color: white;
 }
 
 strong {
@@ -42,9 +103,13 @@ body {
  
 }
 
-.maintrail1 {
-  margin-top: 50px;
+.maintrails {
+  list-style-type: none;
+
+
 }
+
+
 
 .logo {
   margin: 70px auto 30px 140px;
@@ -54,6 +119,7 @@ body {
 .marketing,
 .footer {
   color: #FFFFFF;
+  margine-left: 150px;
 
 } 
 
@@ -67,7 +133,8 @@ body {
 
 #social {
   margin-left: 1000px;
-  margin-top: -100px;
+  margin-top: -160px;
+  padding: 5px;
 }
 
 .follow {
@@ -91,28 +158,35 @@ body {
   }
 }
 
-/* Custom page footer */
 
-.footer {
-  padding-top: 19px;
-  border-top: 1px solid #e5e5e5;
-  margin-top: 30px;
-
-}
 
 .location {
   color: white;
 }
 
 
+
+.featured {
+  color: white;
+  font-size: 25px;
+  margin-left: 110px;
+  margin-bottom: 15px;
+  margin-top: 50px;
+  text-decoration: underline;
+}
+
+
 .maintrails ul {
-  display: inline;
+text-align: center;
+
 }
 
 .maintrails li {
+ margin: auto 20px auto 70px;
+  padding: 15px;
   float: left;
-  margin: 20px 80pxpx 70px auto;
-  padding: 40px;
+    background-color: #1E7319;
+
 }
 
 
@@ -123,7 +197,7 @@ body {
 
   .btn {
     font-size: 16px;
-    padding: 4px 24px;
+    padding: 4px 64px;
   }
 }
 
@@ -136,6 +210,61 @@ body {
   }
 }
 
+.credits ul{
+float: left;
+}
+
+.aboutus {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  margin-left:  80px;
+  margin-right: 30px;
+  margin-top: -60px;
+  margin-bottom: 50px;
+}
+
+.connect {
+  text-decoration: none;
+  list-style-type: none;
+ 
+  margin-right: 40px;
+  
+  color: white;
+  margin-top: -60px;
+  margin-bottom: 50px;
+ 
+}
+
+.support {
+  text-decoration: none;
+  list-style-type: none;
+  margin-left: 30px;
+  color: white;
+  float: left;
+  margin-top: -60px;
+  margin-bottom: 50px;
+}
+
+.contact {
+  text-decoration: none;
+  list-style-type: none;
+  margin-left: 50px;
+  color: white;
+  float: left;
+  margin-top: -60px;
+  margin-bottom: 50px;
+}
+
+
+
+.copyright {
+  color: white;
+  margin-top: 330px;
+  text-align: center;
+}
+
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
@@ -144,8 +273,7 @@ body {
 
   /* Remove the padding we set earlier */
   .header,
-  .marketing,
- .footer {
+  .marketing  {
     padding-left: 0;
     padding-right: 0;
   } 
