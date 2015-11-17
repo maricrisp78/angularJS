@@ -49,24 +49,24 @@ angular.module('angularJsApp')
 
   });
 
-$( document ).ready(function() {
+// $( document ).ready(function() {
 
-var userInfo = {
-    username: ' guest'
+// var userInfo = {
+//     username: ' guest'
 
-};
+// };
 
 
-    $('#login-form').on('click', function() {
-        $('#login-form').hide();
-        $('.user-info').show();
-        $('.username').text(userInfo.username);
+//     $('#login-form').on('click', function() {
+//         $('#login-form').hide();
+//         $('.user-info').show();
+//         $('.username').text(userInfo.username);
 
-    $('.submit').on('click', function() {
-        $('.submit').show();
-        $('#login-form').hide();
-        $('.user-info').hide() ++;
+//     $('.submit').on('click', function() {
+//         $('.submit').show();
+//         $('#login-form').hide();
+//         $('.user-info').hide() ++;
         
-    });
-});
-});
+//     });
+// });
+// });
