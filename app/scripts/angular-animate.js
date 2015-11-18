@@ -7,7 +7,7 @@
 
 
 (function(window, angular, undefined) {'use strict';
-
+});
 /* jshint ignore:start */
 var noop        = angular.noop;
 var extend      = angular.extend;
