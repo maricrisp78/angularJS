@@ -1,0 +1,24 @@
+<p class="saved">SAVED HIKES</p>
+
+<div>
+
+     <ul class="hikeresults">
+          <li ng-repeat="hike in storage.savedHikes | limitTo: 5">
+             <strong>{{hike.name}}</strong> | 
+
+             {{hike.city}},
+             {{hike.state}} <br>
+            {{hike.activities[0].description}} 
+            {{hike.activities[0].thumbnail}}  <br>
+      
+
+<br>
+
+      <!--      <button class="savecity" id="btn btn-lg btn-primary" ng-click="saveCity(hike)">Save hike</button> -->
+<br>
+             <br>
+          </li>
+
+        </ul>
+
+ </div>

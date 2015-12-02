@@ -42,6 +42,16 @@ angular
         controller: 'DirectionsCtrl',
         controllerAs: 'directions'
       })
+      .when('/savedHikes', {
+        templateUrl: 'views/savedhikes.html',
+        controller: 'SavedhikesCtrl',
+        controllerAs: 'savedHikes'
+      })
+      .when('/savedHikes', {
+        templateUrl: 'views/savedhikes.html',
+        controller: 'SavedhikesCtrl',
+        controllerAs: 'savedHikes'
+      })
       .otherwise({
         redirectTo: '/'
       });

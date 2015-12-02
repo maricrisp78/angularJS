@@ -21,9 +21,10 @@ angular.module('angularJsApp')
 
 
     $scope.saveCity = function(city){
-        if (!$localStorage.savedCities){
-            $localStorage.savedCities = [];
-            $localStorage.savedCities.push(city);
+        if (!$localStorage.savedHikes){
+            $localStorage.savedHikes = [];
+        
+            $localStorage.savedHikes.push(city);
         } else {
             // We have already saved some cities. 
             // Check to make sure we haven't already saved the current city.
@@ -32,15 +33,15 @@ angular.module('angularJsApp')
 
             // Use this loop to check if we've already saved the city.
 
-            for (var i=0; i < $localStorage.savedCities.length; i++){
-                if ($localStorage.savedCities[i].id === city.id) {
+            for (var i=0; i < $localStorage.savedHikes.length; i++){
+                if ($localStorage.savedHikes[i].id === city.id) {
                     // This is a duplicate, so don't save (variable set to false).
                     save = false;
                 }
             }
 
             if (save === true){
-                $localStorage.savedCities.push(city);
+                $localStorage.savedHikes.push(city);
             } else {
                 console.log('city already saved');
             }
