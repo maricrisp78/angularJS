@@ -15,7 +15,8 @@ angular.module('angularJsApp')
 
     $scope.findHikes = function(){
         $scope.hikesFound = hikeSearch.find({
-            city_eq: $scope.location
+             city_cont: $scope.location
+       
         });
     };
 
@@ -34,11 +35,12 @@ angular.module('angularJsApp')
             // Use this loop to check if we've already saved the city.
 
             for (var i=0; i < $localStorage.savedHikes.length; i++){
-                if ($localStorage.savedHikes[i].id === city.id) {
+                if ($localStorage.savedHikes[i].unique_id === city.unique_id) {
                     // This is a duplicate, so don't save (variable set to false).
                     save = false;
                 }
             }
+                // console.log($localStorage.savedHikes[i].id);
 
             if (save === true){
                 $localStorage.savedHikes.push(city);

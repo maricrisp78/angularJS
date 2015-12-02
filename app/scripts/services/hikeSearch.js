@@ -16,13 +16,15 @@ angular.module('angularJsApp')
     // Public API here
 
     return $resource(
-      'https://outdoor-data-api.herokuapp.com/api.json?api_key=3d915e7fea908a3df09ece5462427d44&city_eq=:city_eq', {},
+      'https://trailapi-trailapi.p.mashape.com/?q[city_cont]=:city_cont', {},
       {
         find: {
-          method: 'JSONP',
+          method: 'GET',
+          headers:{
+            'X-Mashape-Key': 'zEe48mTpJumshw1QLLrbFi4g6huSp1AoAgBjsnsYqmtxr90Wqm'
+          },
           params: {
-            city_eq: '',
-            callback: 'JSON_CALLBACK'
+            city_cont: ''
           }
         }
       }
