@@ -4,7 +4,7 @@
     <div>
         <p>
           <label class="Location">Location:
-            <input type="text" name="location" placeholder="Enter City here" minlength="2" ng-model="location">
+            <input type="text" name="location" placeholder="Enter City here" method="get" minlength="2" ng-model="location">
           </label>
         </p>
    
@@ -23,7 +23,7 @@
 
         <!-- {{hikesFound.places[0].city}} -->
         <ul class="hikeresults">
-          <li ng-animate="'animate'" ng-repeat="hike in hikesFound.places | limitTo: 5">
+          <li ng-animate="'animate'" ng-repeat="hike in hikesFound.places | limitTo: 7">
              <strong>{{hike.name}}</strong> | 
 
              {{hike.city}},
