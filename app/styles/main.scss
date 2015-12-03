@@ -51,8 +51,28 @@ h2 {
   font-size: 18px;
 }
 
-.nav navbar-nav {
-  color: #1E7319;
+.active {
+  background-color: wheat;
+  margin-left: 50px;
+  padding: 5px;
+  border-radius: 5px;
+
+}
+
+.aboutnav {
+  background-color: wheat;
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 5px;
+
+}
+
+.aboutnav:hover {
+  background-color: #E34724;
+}
+
+.active:hover {
+  background-color: #E34724;
 }
 
 .browsehappy {
